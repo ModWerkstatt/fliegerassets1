@@ -1,0 +1,74 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 8.5, 5.5, 4.5, },
+		bbMin = { -8.5, -5.5, 0.0, },
+	},
+	collider = {
+		params = {
+			
+		},
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+			children = {
+				{
+					materials = { "asset/militaer/a7v/a7v.mtl", },
+					mesh = "asset/militaer/a7v/a7v.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				}, 
+			},
+			    name = "RootNode",
+			    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 150,
+		},
+		{
+			node = {
+			children = {
+				{
+					materials = { "asset/militaer/a7v/a7v.mtl", },
+					mesh = "asset/militaer/a7v/a7v.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				}, 
+			},
+			    name = "RootNode",
+			    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		},
+			static = false,
+			visibleFrom = 150,
+			visibleTo = 250,
+		},
+		{
+			node = {
+			children = {
+				{
+					materials = { "asset/militaer/a7v/a7v.mtl", },
+					mesh = "asset/militaer/a7v/a7v.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				}, 
+			},
+			    name = "RootNode",
+			    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		},
+			static = false,
+			visibleFrom = 250,
+			visibleTo = 2000,
+		}, 
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1943,
+			yearTo = 1945,
+		},
+		cost = {
+			price = 5000,
+		},
+	},
+	version = 1,
+}
+end

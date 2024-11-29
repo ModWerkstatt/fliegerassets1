@@ -1,0 +1,53 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 6.13848, 6.21479, 3.77282, },
+		bbMin = { -4.46368, -6.21479, -0.01812, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Luftwaffe/me262-asset/rumpf.mtl", },
+						mesh = "asset/Luftwaffe/me262-asset/rumpf.msh",
+						name = "MSH_rumpf_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.28615, 0, 1.94058, 1, },
+					},
+					{
+						_meshId = 2,
+						_origMeshId = 2,
+						materials = { "asset/Luftwaffe/me262-asset/scheibe.mtl", },
+						mesh = "asset/Luftwaffe/me262-asset/scheibe.msh",
+						name = "MSH_scheibe_1",
+						transf = { 0.00846, 0, -0.01261, 0, 0, 0.01061, 0, 0, 0.01861, 0, 0.01248, 0, -0.51525, 0, 2.74444, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1935,
+			yearTo = 1945,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

@@ -1,0 +1,53 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 7.6762, 5.62107, 6.04565, },
+		bbMin = { -8.1194, -5.62103, -0.41613, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Bundeswehr/ef2000_glas.mtl", },
+						mesh = "asset/Bundeswehr/ef2000_glas.msh",
+						name = "MSH_ef2000_glas_1",
+						transf = { -0.98021, -0, 0.19797, 0, 0, -1, 0, 0, 0.19797, 0, 0.98021, 0, 4.21168, 2e-05, 3.65034, 1, },
+					},
+					{
+						_meshId = 2,
+						_origMeshId = 2,
+						materials = { "asset/Bundeswehr/ef2000_rumpf.mtl", },
+						mesh = "asset/Bundeswehr/ef2000_rumpf.msh",
+						name = "MSH_ef2000_rumpf_1",
+						transf = { 0.03894, 0, -0.99924, 0, 0, -1, -0, 0, -0.99924, -0, -0.03894, 0, 5.57396, 2e-05, 2.55925, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 0,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

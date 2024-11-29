@@ -1,0 +1,47 @@
+function data()
+return {
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Hubschrauber Asset Set"),
+		description = _("Statische Hubschrauber.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Plane Assets" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "uh1",
+			name = _("Bell UH-1 1959"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/heli/uh1_1.tga", "ui/heli/uh1_2.tga", },
+			tooltip = _("Bell UH1") .. _("als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+
+		if params.uh1 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.uh1 == 1 then
+		result.models[#result.models+1] = {id = "asset/heli/uh1_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.uh1 == 2 then
+		result.models[#result.models+1] = {id = "asset/heli/uh1_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

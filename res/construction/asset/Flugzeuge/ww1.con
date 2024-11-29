@@ -1,0 +1,259 @@
+function data()
+return {
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Luftwaffe Asset Set"),
+		description = _("Statische Flugzeuge/Asset des ersten Weltkrieg.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Plane Assets" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "e3",
+			name = _("Fokker E.III 1915"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/e3_1.tga", "ui/ww1/e3_2.tga",},
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "d3",
+			name = _("Albatross D.3 1916"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/a3_1.tga", "ui/ww1/a3_2.tga", "ui/ww1/a3_3.tga", "ui/ww1/a3_4.tga", "ui/ww1/a3_5.tga", "ui/ww1/a3_6.tga", "ui/ww1/a3_7.tga", "ui/ww1/a3_8.tga",},
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "dr1",
+			name = _("Fokker Dr.I 1917"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/dr1_1.tga", "ui/ww1/dr1_2.tga", "ui/ww1/dr1_3.tga", "ui/ww1/dr1_4.tga", "ui/ww1/dr1_5.tga", "ui/ww1/dr1_6.tga", "ui/ww1/dr1_7.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "d7",
+			name = _("Fokker D.VII 1918"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/d7_1.tga", "ui/ww1/d7_2.tga", "ui/ww1/d7_3.tga", "ui/ww1/d7_4.tga", "ui/ww1/d7_5.tga", "ui/ww1/d7_6.tga", "ui/ww1/d7_7.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "d8",
+			name = _("Fokker D.VIII 1918"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/d8_1.tga", "ui/ww1/d8_2.tga", "ui/ww1/d8_3.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "hangar",
+			name = _("Hangar"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/hangar1.tga", "ui/ww1/hangar2.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "zelt",
+			name = _("Fliegerzelt"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/zelt.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "a7v",
+			name = _("Panzer A7V 1916"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/a7v.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+		{
+			key = "krupp",
+			name = _("Krupp 21cm Moerser 16"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/ww1/krupp21.tga", "ui/ww1/krupp212.tga", },
+			tooltip = _("Luftwaffe WW1") .. _("als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+
+		if params.e3 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.e3 == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/e3_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.e3 == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/e3_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.d3 == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 3 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 4 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 5 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 6 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 7 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_7.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d3 == 8 then
+		result.models[#result.models+1] = {id = "asset/ww1/a3_8.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.dr1 == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 3 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 4 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 5 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 6 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.dr1 == 7 then
+		result.models[#result.models+1] = {id = "asset/ww1/dr1_7.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.d7 == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 3 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 4 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 5 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 6 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d7 == 7 then
+		result.models[#result.models+1] = {id = "asset/ww1/d7_7.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d8 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.d8 == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/d8_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d8 == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/d8_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.d8 == 3 then
+		result.models[#result.models+1] = {id = "asset/ww1/d8_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.zelt == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.zelt == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/zelt.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.hangar == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.hangar == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/hangar1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.hangar == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/hangar2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.a7v == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.a7v == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/a7v.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.krupp == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.krupp == 1 then
+		result.models[#result.models+1] = {id = "asset/ww1/krupp21.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.krupp == 2 then
+		result.models[#result.models+1] = {id = "asset/ww1/krupp212.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

@@ -1,0 +1,53 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 2.33644, 9.00195, 4.76234, },
+		bbMin = { -10.81235, -9.00195, -0.0131, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Luftwaffe/ju88/fenster.mtl", },
+						mesh = "asset/Luftwaffe/ju88/Fenster.msh",
+						name = "MSH_Fenster_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.18185, 0, 0.02353, 1, },
+					},
+					{
+						_meshId = 2,
+						_origMeshId = 2,
+						materials = { "asset/Luftwaffe/ju88/rumpf.mtl", },
+						mesh = "asset/Luftwaffe/ju88/Rumpf.msh",
+						name = "MSH_Rumpf_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.18185, 0, 0.02353, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1936,
+			yearTo = 1945,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

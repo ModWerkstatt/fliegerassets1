@@ -1,0 +1,160 @@
+function data()
+return {
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Bundeswehr Asset Set"),
+		description = _("Statische Flugzeuge der Bundeswehr.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Plane Assets" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "cup",
+			name = _("Piper Cub"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/piper.tga", },
+			tooltip = _("Piper") .. _("als Asset"),
+		},
+		{
+			key = "f84",
+			name = _("F-86 Thunderstreak"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/f84.tga", },
+			tooltip = _("F-84") .. _("als Asset"),
+		},
+		{
+			key = "f86",
+			name = _("F-86 Sabre 1947"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/f86.tga", },
+			tooltip = _("F-86") .. _("als Asset"),
+		},
+		{
+			key = "f104",
+			name = _("F-104 Starfighter 1958"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/f104-1.tga", "ui/bundeswehr/f104-2.tga", },
+			tooltip = _("F-104") .. _("als Asset"),
+		},
+		{
+			key = "f4",
+			name = _("F-4 Phantom 1960"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/f4-1.tga", "ui/bundeswehr/f4-2.tga", },
+			tooltip = _("F-4") .. _("als Asset"),
+		},
+		{
+			key = "tornado",
+			name = _("Panavia Tornado 1980"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/tornado-1.tga", "ui/bundeswehr/tornado-2.tga", },
+			tooltip = _("Tornado") .. _("als Asset"),
+		},
+		{
+			key = "m29",
+			name = _("MIG 29 Fulcrum 1996"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/mig29.tga", },
+			tooltip = _("Mig 29") .. _("als Asset"),
+		},
+		{
+			key = "ef2000",
+			name = _("Eurofighter 2000"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/bundeswehr/leer.tga", "ui/bundeswehr/ef2000.tga", },
+			tooltip = _("EF 2000") .. _("als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+
+		if params.cup == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.cup == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/Piper_cub_bund.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f84 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.f84 == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/F84-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f86 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.f86 == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/F86-1.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f104 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.f104 == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/F-104.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f104 == 2 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/F-104-2.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f4 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.f4 == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/F4-Phantom.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f4 == 2 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/F4-Phantom2.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.tornado == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.tornado == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/Tornado-1.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.tornado == 2 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/Tornado-2.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.m29 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.m29 == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/Mig-29_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.ef2000 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.ef2000 == 1 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/ef2000.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

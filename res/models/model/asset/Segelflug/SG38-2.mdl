@@ -1,0 +1,45 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 0.88944, 5.71992, 1.52926, },
+		bbMin = { -5.28787, -5.00493, 0, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Segelflug/sg38/rumpf2.mtl", },
+						mesh = "asset/Segelflug/sg38/rumpf2.msh",
+						name = "MSH_rumpf2_1",
+						transf = { 1, 0, 0, 0, 0, 0.95621, -0.29268, 0, 0, 0.29268, 0.95621, 0, 0, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 0,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

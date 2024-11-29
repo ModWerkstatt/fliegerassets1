@@ -1,0 +1,180 @@
+function data()
+return {
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Luftwaffe Asset Set"),
+		description = _("Statische Flugzeuge der Luftwaffe.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Plane Assets" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "m109",
+			name = _("Messerschmitt Me 109 E 1937"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/me109.tga", },
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "f190",
+			name = _("Focke Wulf 190 1941"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/fw190.tga", },
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "m262",
+			name = _("Messerschmitt Me 262 Schwalbe 1944"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/me262.tga", },
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "storch",
+			name = _("Fieseler Fi 156 Storch 1936"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/storch1.tga", "ui/luftwaffe/storch2.tga", },
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "j87",
+			name = _("Junker Ju 87 Stuka 1937"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/ju87.tga",},
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "j88",
+			name = _("Junker Ju 88 1939"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/ju88.tga",},
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "v1",
+			name = _("V1 - Fieseler 103"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/v1-1.tga", "ui/luftwaffe/v1-2.tga", "ui/luftwaffe/v1-3.tga", "ui/luftwaffe/v1-4.tga",},
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+		{
+			key = "v2",
+			name = _("V2 - Aggregat-4 (A4)"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga",  "ui/luftwaffe/v2-1.tga", "ui/luftwaffe/v2-2.tga", "ui/luftwaffe/v2-3.tga", "ui/luftwaffe/v2-4.tga","ui/luftwaffe/v2-triebwerk.tga",},
+			tooltip = _("Luftwaffe") .. _("als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+
+		if params.m109 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.m109 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/me109-asset1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.f190 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.f190 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/fw190-asset-1.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.m262 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.m262 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/me262-asset.mdl", transf = {-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.storch == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.storch == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/storch1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.storch == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/storch2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.j87 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.j87 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ju87-B.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.j88 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.j88 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ju88.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v1 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.v1 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/V1-Startklar.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v1 == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/walterschleuder_leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v1 == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/V1_auf_wagen.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v1 == 4 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Rampenwagen.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v2 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+
+		if params.v2 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/v2_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v2 == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/v2_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v2 == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/v2_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v2 == 4 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/v2_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.v2 == 5 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/v2_triebwerk.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

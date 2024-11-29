@@ -1,0 +1,356 @@
+function data()
+return {
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Segelflug Asset Set"),
+		description = _("Statische Segelflugzeuge.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Plane Assets" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "habicht15m",
+			name = _("Habicht 15m ab 1936"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/hab15-1.tga", "ui/segler/hab15-2.tga", "ui/segler/hab15-3.tga", "ui/segler/hab15-4.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "habicht6m",
+			name = _("Habicht 6m und 8m ab 1936 bis 1945"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/hab6-1.tga", "ui/segler/hab6-2.tga", "ui/segler/hab8-1.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "sg38",
+			name = _("Schulgleiter 38 ab 1938"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/sg38-1.tga", "ui/segler/sg38-2.tga", "ui/segler/sg38-3.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "reiher",
+			name = _("DFS Reiher ab 1938"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/rei-1.tga", "ui/segler/rei-2.tga", "ui/segler/rei-3.tga", "ui/segler/rei-4.tga", "ui/segler/rei-5.tga", "ui/segler/rei-6.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "storche",
+			name = _("Fieseler Fi 156 Storch 1945"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/storch.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "pipers",
+			name = _("Piper J3/Cub 1945"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/j3-1.tga", "ui/segler/j3-2.tga", "ui/segler/j3-3.tga", "ui/segler/j3-4.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "ka6",
+			name = _("Schleicher Ka 6 ab 1955"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/k6.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "k8b",
+			name = _("Schleicher K8 b ab 1957"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/k8-1.tga", "ui/segler/k8-2.tga", "ui/segler/k8-3.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "asw12",
+			name = _("ASW 12 ab 1965"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/a12-1.tga", "ui/segler/a12-2.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "kestrel",
+			name = _("Kestrel ab 1968"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/kes-1.tga", "ui/segler/kes-2.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "akaflieg",
+			name = _("akaflieg SB10 ab 1972"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/aka.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "ask18",
+			name = _("Schleicher ASK18 b ab 1974"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/a18-1.tga", "ui/segler/a18-2.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "asw20",
+			name = _("Schleicher ASW 20 ab 1977"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/a20-1.tga", "ui/segler/a20-2.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+		{
+			key = "ask21",
+			name = _("Schleicher ASK 21 ab 1978"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/segler/leer.tga", "ui/segler/a21-1.tga", "ui/segler/a21-2.tga", "ui/segler/a21-3.tga", },
+			tooltip = _("Segelflug") .. _("als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+
+		if params.habicht15m == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.habicht15m == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht15m-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.habicht15m == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht15m-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.habicht15m == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht15m-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.habicht15m == 4 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht15m-4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+		if params.habicht6m == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.habicht6m == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht6m-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.habicht6m == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht6m-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.habicht6m == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/habicht8m-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.sg38 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.sg38 == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/SG38-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.sg38 == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/SG38-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.sg38 == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/SG38-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.reiher == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.reiher == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/reiher-III-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.reiher == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/reiher-III-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.reiher == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/reiher-III-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.reiher == 4 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/reiher-III-4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.reiher == 5 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/reiher-III-5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.reiher == 6 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/reiher-III-6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.storche == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.storche == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/storch.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.pipers == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.pipers == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/piper_j3-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.pipers == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/piper_j3-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.pipers == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/Piper_cub.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.pipers == 4 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/Piper_cub2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.ka6 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.ka6 == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/ka6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.k8b == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.k8b == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/k8b-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.k8b == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/k8b-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.k8b == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/k8b-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.asw12 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.asw12 == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/asw12-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.asw12 == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/asw12-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.kestrel == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.kestrel == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/Kestrel-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.kestrel == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/Kestrel-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.akaflieg == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.akaflieg == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/sb10.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.ask18 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.ask18 == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/ask18-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.ask18 == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/ask18-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.asw20 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.asw20 == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/asw20-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.asw20 == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/asw20-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+
+		if params.ask21 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1, }, }
+		end
+
+		if params.ask21 == 1 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/ask21-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.ask21 == 2 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/ask21-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+		if params.ask21 == 3 then
+		result.models[#result.models+1] = {id = "asset/Segelflug/ask21-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+
+
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

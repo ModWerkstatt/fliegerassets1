@@ -1,0 +1,53 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 9.05633, 6.91366, 5.7736, },
+		bbMin = { -8.06459, -6.91366, -0.09709, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Bundeswehr/Tornado-glas.mtl", },
+						mesh = "asset/Bundeswehr/Tornado_glas.msh",
+						name = "MSH_Tornado_glas_1",
+						transf = { 0.99995, 0, 0.01044, 0, 0, 1, 0, 0, -0.01044, 0, 0.99995, 0, -1.17724, 0, 2.54588, 1, },
+					},
+					{
+						_meshId = 2,
+						_origMeshId = 2,
+						materials = { "asset/Bundeswehr/Tornado-1-rumpf.mtl", },
+						mesh = "asset/Bundeswehr/Tornado-1_rumpf.msh",
+						name = "MSH_Tornado-1_rumpf_1",
+						transf = { 0.99995, 0, 0.01044, 0, 0, 1, 0, 0, -0.01044, 0, 0.99995, 0, -5.11197, 0, 1.74966, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 0,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

@@ -1,0 +1,53 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 7.7068, 3.36695, 3.81017, },
+		bbMin = { -8.64415, -3.36695, -0.01089, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Bundeswehr/f104_glas.mtl", },
+						mesh = "asset/Bundeswehr/f104_glas.msh",
+						name = "MSH_f104_glas_1",
+						transf = { 0, 0.35186, 0, 0, -0, 0, 0.35186, 0, 0.35186, -0, 0, 0, -6.19743, 0, 1.31665, 1, },
+					},
+					{
+						_meshId = 2,
+						_origMeshId = 2,
+						materials = { "asset/Bundeswehr/f104_2_rumpf.mtl", },
+						mesh = "asset/Bundeswehr/f104_2_rumpf.msh",
+						name = "MSH_f104_2_rumpf_1",
+						transf = { 0, 1, 0, 0, -0, 0, 1, 0, 1, -0, 0, 0, -6.19743, 0, 1.31665, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 0,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

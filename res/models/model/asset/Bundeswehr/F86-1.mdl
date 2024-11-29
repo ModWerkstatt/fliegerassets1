@@ -1,0 +1,45 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 8.36878, 5.39575, 4.18294, },
+		bbMin = { -2.96188, -5.39575, -0.001, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Bundeswehr/f86-1-rumpf.mtl", "asset/Bundeswehr/f86-1-glas.mtl", },
+						mesh = "asset/Bundeswehr/f86.msh",
+						name = "MSH_f86_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.08735, 0, 1.57001, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 0,
+			yearTo = 0,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end

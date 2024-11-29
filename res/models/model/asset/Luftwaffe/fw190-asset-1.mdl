@@ -1,0 +1,53 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 7.17082, 5.66601, 2.34707, },
+		bbMin = { -2.30089, -5.66601, 0, },
+	},
+	collider = {
+		params = { },
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+				animations = { },
+				children = {
+					{
+						_meshId = 1,
+						_origMeshId = 1,
+						materials = { "asset/Luftwaffe/fw190-asset/glas.mtl", },
+						mesh = "asset/Luftwaffe/fw190-asset/glas.msh",
+						name = "MSH_glas_1",
+						transf = { 0.97719, 0, -0.21239, 0, 0, 1, 0, 0, 0.21239, 0, 0.97719, 0, 1.61378, 0, 2.61449, 1, },
+					},
+					{
+						_meshId = 2,
+						_origMeshId = 2,
+						materials = { "asset/Luftwaffe/fw190-asset/rumpf.mtl", },
+						mesh = "asset/Luftwaffe/fw190-asset/rumpf.msh",
+						name = "MSH_rumpf_1",
+						transf = { 0.97719, 0, -0.21239, 0, 0, 1, 0, 0, 0.21239, 0, 0.97719, 0, 1.71201, 0, 2.60122, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 2500,
+		},
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1940,
+			yearTo = 1945,
+		},
+		cost = {
+			price = -1,
+		},
+	},
+	version = 1,
+}
+end
