@@ -1,0 +1,129 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 10, 11, 8, },
+			bbMin = { -11, -11, 0, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 10.5, 11, 4, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.5, 0, 4, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/hangar.msh",
+							name = "hangar_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/tor1.msh",
+							name = "tor1_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/tor2.msh",
+							name = "tor2_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 10.3466, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/glas.mtl", },
+							mesh = "msh/hangar/glas.msh",
+							name = "glas_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.29521, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 150,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/hangar.msh",
+							name = "hangar_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/tor1.msh",
+							name = "tor1_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/tor2.msh",
+							name = "tor2_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 10.3466, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/glas.mtl", },
+							mesh = "msh/hangar/glas.msh",
+							name = "glas_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.29521, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 150,
+				visibleTo = 250,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/hangar.msh",
+							name = "hangar_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/tor1.msh",
+							name = "tor1_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -5, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/hangar.mtl", },
+							mesh = "msh/hangar/tor2.msh",
+							name = "tor2_3",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 10.3466, 0, 1, },
+						},
+						{ 
+							materials = { "mat/hangar/glas.mtl", },
+							mesh = "msh/hangar/glas.msh",
+							name = "glas_4",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.29521, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 250,
+				visibleTo = 2000,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1943,
+				yearTo = 1945,
+			},
+			cost = { 
+				price = 5000,
+			},
+		},
+		version = 2,
+	}
+end

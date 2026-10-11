@@ -1,0 +1,43 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 3.60205, 7.99013, 4.419, },
+			bbMin = { -11.0473, -7.99014, -0.01468, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 7.32469, 7.99014, 2.21684, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.72264, -5.00679e-06, 2.20216, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/f84/f84_rumpf.mtl", "mat/f84/glas.mtl", },
+							mesh = "msh/f84/f84.msh",
+							name = "body",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.5906, 0, 1.7991, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 1500,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 0,
+				yearTo = 0,
+			},
+			cost = { 
+				price = -1,
+			},
+		},
+		version = 2,
+	}
+end

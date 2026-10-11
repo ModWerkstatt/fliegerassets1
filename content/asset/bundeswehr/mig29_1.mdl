@@ -1,0 +1,49 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 10.4585, 7.07554, 5.49081, },
+			bbMin = { -9.54844, -5.92625, 0, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 10.0035, 6.5009, 2.7454, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.455025, 0.574645, 2.7454, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "mat/mig29/glas.mtl", },
+							mesh = "msh/mig29/mig29_glas.msh",
+							name = "MSH_mig29_glas_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.47666, 0.57465, 3.07097, 1, },
+						},
+						{ 
+							materials = { "mat/mig29/mig29_rumpf.mtl", },
+							mesh = "msh/mig29/mig29_rumpf.msh",
+							name = "MSH_mig29_rumpf_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.5883, 0.57465, 2.25203, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 1500,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 0,
+				yearTo = 0,
+			},
+			cost = { 
+				price = -1,
+			},
+		},
+		version = 2,
+	}
+end
