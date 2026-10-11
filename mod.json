@@ -1,6 +1,6 @@
 {
     "autoActivate": false,
-    "cosmetic": null,
+    "cosmetic": true,
     "dependencies": null,
     "incompatibilities": null,
     "modId": "mw_fliegerassets1",
