@@ -14,7 +14,7 @@ return {
 			map_albedo = { 
 				fragmentSamplers = { 
 					albedoTex = { 
-						fileName = "/asset/Bundeswehr/Tornado_2/mat/tex/rumpf_albedo_opacity.dds",
+						fileName = "tex/rumpf_albedo_opacity.dds",
 						type = "TWOD",
 						wrapS = "REPEAT",
 						wrapT = "REPEAT",
